@@ -5,7 +5,8 @@ import java.util.Arrays;
  * Hint: Similar to how merge sort divides arrays.
  * Split the array in half, find the largest element from each division, and then compare the larger values. Return the largest element.
 */
-public class RecursiveExercises {
+
+public class recursiveExercises {
     public static int findMax(int[] arr, int left, int right) {
         if (left == right) { //If the subarray has one element.
             return arr[left]; //Return the one elemenet. This is the largest number.
@@ -19,11 +20,6 @@ public class RecursiveExercises {
         }else {
             return maxRight;
         }
-    } // end of FindMax
- public static void main(String[] args) {
-        int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
-        System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
-    } //end of test 1
-} //end of class
+        } // end of FindMax
 
-    
+    } //end of class
