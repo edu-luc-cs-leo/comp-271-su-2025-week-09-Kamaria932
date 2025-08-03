@@ -37,12 +37,29 @@ public static void reverseArray(int[] arr, int left, int right) {
     //Move the pointers toward the center and then repeat.
     reverseArray(arr, left + 1, right - 1);
 }
-
+/*Part 3: CountOccurreneces 
+ * Goal: Count how many times a target value appears in the array.
+ * Stop the count if the index is past the last element within the array. Keep the count within bounds.
+ * If element matches searched target increase the count by 1.
+ */
+public static int countOccurrences(int[] arr, int target, int index) {
+    //If the index is past the last element, nothing is left to count.
+    if (index >= arr.length) {
+    return 0;
+    }
+    int countContinue = countOccurrences(arr, target, index + 1); //recursively count the rest of the array
+    //Add 1 to the count if the current element matches the target.
+    if (arr[index] == target) {
+        return 1 + countContinue;
+    } else {
+        return countContinue; 
+    }
+}
  public static void main(String[] args) {
         int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
         System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
  
-        int[] arr2 = {1, 2, 3, 4, 5}; //create an array with 5 elements 
+        int[] arr2 = {2, 4, 6, 8, 10}; //create an array with 5 elements 
         System.out.println("arr2 before reverse: " + Arrays.toString(arr2));
         reverseArray(arr2, 0, arr2.length - 1);
         System.out.println("arr2 before revers: " + Arrays.toString(arr2));
