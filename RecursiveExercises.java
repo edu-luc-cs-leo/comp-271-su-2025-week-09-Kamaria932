@@ -52,7 +52,7 @@ public static int countOccurrences(int[] arr, int target, int index) {
     if (arr[index] == target) {
         return 1 + countContinue;
     } else {
-        return countContinue; 
+        return countContinue; //once all the elemnet matches have been found return count total.
     }
 }
  public static void main(String[] args) {
