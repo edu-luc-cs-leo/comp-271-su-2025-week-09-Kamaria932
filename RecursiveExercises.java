@@ -55,6 +55,29 @@ public static int countOccurrences(int[] arr, int target, int index) {
         return countContinue; //once all the elemnet matches have been found return count total.
     }
 }
+/*Part 4: Binary Search
+ * Goal: Recursively search in a sorted array to locate a target value.
+ * If the element is not found return -1.
+ * Find midpoint, divide the array, if midpoint is a match return index if not keep looking.
+ * search through both subarrays until target is found. Return the matching target index.
+ */
+public static int binarySearch(int[] arr, int target, int left, int right) {
+    if (left > right) { //invalid search? 
+        return -1; //Return -1.
+    }
+    int mid = (left + right) / 2; //find midpoint of the current array.
+    if (arr[mid] == target) { //if midpoint is the target
+        return mid; //return midpoint index.
+    }
+    /*Keep searching the subarrays until the target is found. 
+     *Target is greater than midpoint. Search right half of the subarray.
+    */
+    if (arr[mid] < target) { 
+        return binarySearch(arr, target, mid + 1, right); //seacrh the array for the target. Check the right side of the array from midpoint.
+    } else {
+        return binarySearch(arr, target, left, mid - 1); //seacrh the array for the target. Check the left side of the array until midpoint.
+    }
+}
  public static void main(String[] args) {
         int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
         System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
