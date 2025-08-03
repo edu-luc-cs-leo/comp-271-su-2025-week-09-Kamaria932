@@ -41,7 +41,12 @@ public static void reverseArray(int[] arr, int left, int right) {
  public static void main(String[] args) {
         int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
         System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
-    } //end of test 1
+ 
+        int[] arr2 = {1, 2, 3, 4, 5}; //create an array with 5 elements 
+        System.out.println("arr2 before reverse: " + Arrays.toString(arr2));
+        reverseArray(arr2, 0, arr2.length - 1);
+        System.out.println("arr2 before revers: " + Arrays.toString(arr2));
+    } //end of tests
 } //end of class
 
     
