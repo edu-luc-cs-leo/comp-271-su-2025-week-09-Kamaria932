@@ -79,7 +79,7 @@ public static int binarySearch(int[] arr, int target, int left, int right) {
     }
 }
  public static void main(String[] args) {
-        int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
+        int[] arr1 = {1, 2, 4, 6, 7}; //create an array with 5 elements 
         System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
  
         int[] arr2 = {2, 4, 6, 8, 10}; //create an array with 5 elements 
@@ -87,8 +87,11 @@ public static int binarySearch(int[] arr, int target, int left, int right) {
         reverseArray(arr2, 0, arr2.length - 1); //search array 2, swap left and right elements.
         System.out.println("arr2 before revers: " + Arrays.toString(arr2));
     
-        int[] arr3 = {1, 2, 3, 2, 2}; //create an array with 5 elements 
+        int[] arr3 = {1, 2, 2, 2, 6}; //create an array with 5 elements 
         System.out.println("number of twos in arr3: " + countOccurrences(arr3, 2, 0)); //search array 3, look for target 2, begin at index 0.
+
+        int[] arr4 = {1, 3, 5, 7, 9}; //create an array with 5 elements 
+        System.out.println("Index of 5: " + binarySearch(arr4, 5, 0, arr4.length - 1)); //search array 4, look for traget 5, begin at index 0, go through the entire array.
     } //end of tests
 } //end of class
 
