@@ -61,8 +61,11 @@ public static int countOccurrences(int[] arr, int target, int index) {
  
         int[] arr2 = {2, 4, 6, 8, 10}; //create an array with 5 elements 
         System.out.println("arr2 before reverse: " + Arrays.toString(arr2));
-        reverseArray(arr2, 0, arr2.length - 1);
+        reverseArray(arr2, 0, arr2.length - 1); //search array 2, swap left and right elements.
         System.out.println("arr2 before revers: " + Arrays.toString(arr2));
+    
+        int[] arr3 = {1, 2, 3, 2, 2}; //create an array with 5 elements 
+        System.out.println("number of twos in arr3: " + countOccurrences(arr3, 2, 0)); //search array 3, look for target 2, begin at index 0.
     } //end of tests
 } //end of class
 
