@@ -20,6 +20,24 @@ public class RecursiveExercises {
             return maxRight;
         }
     } // end of FindMax
+
+    /*Part 2: Reverse the Array
+     * Reverse the array in place
+     * Take an array and swap when left and right cross each other in the array.
+     */
+public static void reverseArray(int[] arr, int left, int right) {
+    //Stop when the two pointers meet or cross within the array.
+    if (left >= right) {
+        return;
+    }
+    //swap the elements located at the two pointers.
+    int temp = arr[left];
+    arr[left] = arr[right];
+    arr[right] = temp;
+    //Move the pointers toward the center and then repeat.
+    reverseArray(arr, left + 1, right - 1);
+}
+
  public static void main(String[] args) {
         int[] arr1 = {6, 4, 2, 1, 7}; //create an array with 5 elements 
         System.out.println("The largest value is: " + findMax(arr1, 0, arr1.length - 1)); //search the array and give the largest element.
